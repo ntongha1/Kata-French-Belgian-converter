@@ -9,8 +9,8 @@ def cli():
         "--lang",
         type=str,
         default="fr",
-        choices=["fr", "bg"],
-        help="Language Variant: fr - French (default), bg - Belgian",
+        choices=["fr", "be"],
+        help="Language Variant: fr - French (default), be - Belgian",
     )
     args = parser.parse_args()
 

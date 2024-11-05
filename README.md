@@ -84,7 +84,7 @@ You will get the below as a response
 1. Run the CLI interface:
 
 ```bash
-   python cli.py <number> --lang <language>
+   python3 cli.py <number> --lang <language>
 ```
 
 <number>: The number to convert.
@@ -106,7 +106,7 @@ Testing
 Unit tests are provided in the `tests` directory. To run the tests, use:
 
 ```bash
-python -m unittest tests.test_converter
+python3 -m unittest tests.test_converter
 ```
 
 ## See some tools and prompts used
