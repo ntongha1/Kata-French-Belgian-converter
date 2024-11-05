@@ -58,8 +58,13 @@ poetry shell
    ```
    uvicorn app:app --reload
    ```
-   By default, the server will run on http://127.0.0.1:8000.
-2. To convert a number, make a GET request to /translate with the number query parameter.
+   By default, the server will run on http://127.0.0.1:8000. 
+   Since we are running application with FASTAPI, we can use SwaggerUI from FASTAPI:
+   
+   Swagger UI: http://127.0.0.1:8000/docs
+   ReDoc: http://127.0.0.1:8000/redoc
+   
+3. To convert a number, make a GET request to /translate with the number query parameter.
 
 ```bash
 curl "http://127.0.0.1:8000/translate?number=<number>"
