@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "jus mundi interview-kata-number-to-french-converter"
+version = "0.1.0"
+description = "kata-number-to-french-converter"
+authors = ["ntongha <ntongha1@gmail.com>"]
+readme = "README.md"
+packages = [{include = "jus mundi interview_kata_number_to_french_converter"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+uvicorn = "^0.32.0"
+
+[tool.poetry.group.dev.dependencies]
+fastapi = "^0.88.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

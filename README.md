@@ -1,4 +1,3 @@
-# Jus-Mundi
 # Kata Number to French Converter
 
 This project provides a Python library, command-line interface (CLI), and web API for converting non-negative integers into their French word equivalents. The supported number range is 0 to 999,999, with options for both standard French and Belgian French.
@@ -31,7 +30,7 @@ kata_number_to_french_converter/
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/ntongha1/Jus-Mundi.git`
+1. Clone the repository: `git clone https://github.com/ntongha1/kata_number_to_french_converter.git`
 2. Navigate to the project directory: `cd jus mundi`
 3. To install the project dependencies, run:
 
