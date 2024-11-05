@@ -31,7 +31,7 @@ kata_number_to_french_converter/
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/ntongha1/kata_number_to_french_converter.git`
-2. Navigate to the project directory: `cd jus mundi`
+2. Navigate to the project directory: `cd kata_number_to_french_converter`
 3. To install the project dependencies, run:
 
 ```bash
