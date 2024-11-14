@@ -1,9 +1,12 @@
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
-from converter import translate_to_french
+from converter import FrenchNumberTranslator
 
 # Initialize the FastAPI app
 app = FastAPI()
+
+# Reuse a single instance of FrenchNumberTranslator
+translator = FrenchNumberTranslator()
 
 @app.get("/translate")
 async def translate(number: int = Query(..., description="The number to translate")):
@@ -17,17 +20,12 @@ async def translate(number: int = Query(..., description="The number to translat
         dict: A dictionary containing the French translation.
     """
     try:
-        # Translate the number using the imported function
-        translated_number = translate_to_french(number)
+        # Translate the number using the reusable translator instance
+        translated_number = translator.convert_number(number)
         return {"translation": translated_number}
     
-    # Handle invalid number input
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     
-    # Handle unexpected errors
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-# To run the FastAPI app, use uvicorn
-# Command: uvicorn main:app --reload
